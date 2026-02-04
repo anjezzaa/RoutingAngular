@@ -11,6 +11,7 @@ import { type User } from './user.model';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
+  
   user = input.required<User>();
 
   imagePath = computed(() => 'users/' + this.user().avatar);
