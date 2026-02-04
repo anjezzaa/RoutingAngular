@@ -26,8 +26,7 @@ export class UserTasksComponent implements OnInit {
     const subscription = this.activatedRoute.paramMap.subscribe({
       next: (paramMap) => {
         this.userName = this.usersService.users.find(
-          (u) => u.id === paramMap.get('userId')
-        )?.name || '';
+          (u) => u.id === paramMap.get('userId'))?.name || '';
       },
     });
     this.destroyRef.onDestroy(() => subscription.unsubscribe());
