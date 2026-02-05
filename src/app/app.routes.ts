@@ -9,8 +9,6 @@ export const routes: Routes = [
     {
         path: '', //<your-domain>/
         component: NoTaskComponent,
-        // redirectTo: '/users/u1',
-        // pathMatch: 'full',
     },
     {
         path: 'users/:userId', //<your-domain>/users/<uid>
@@ -20,7 +18,7 @@ export const routes: Routes = [
             message: 'Hello!'
         },
         resolve: {
-            userName: resolveUserName
+            userName: resolveUserName,
         }
     },
     {
